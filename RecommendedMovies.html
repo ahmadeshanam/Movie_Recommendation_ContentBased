@@ -1,0 +1,709 @@
+<div>
+    <style scoped>
+        .dataframe tbody tr th:only-of-type {
+            vertical-align: middle;
+        }
+
+        .dataframe tbody tr th {
+            vertical-align: top;
+        }
+
+        .dataframe thead th {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            border: 1px solid #d0d0d0;
+            line-height: 60px;
+            text-align: center;
+            color: #333;
+            margin: 0;
+        }
+
+        h1:hover {
+            background-color: #ffed9091;
+            color: #001aff99;
+            font-weight: 700;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+            font-weight: bold;
+        }
+
+        td,
+        th {
+            border: 1px solid #d0d0d0;
+            padding: 8px;
+        }
+
+        tr:hover {
+            background-color: #ffed9091;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        td:first-child {
+            width: 120px;
+        }
+
+        td:nth-child(3),
+        td:nth-child(4),
+        td:nth-child(5) {
+            width: 80px;
+        }
+
+        @media screen and (max-width: 600px) {
+            table {
+                border: 0;
+            }
+
+            th,
+            td {
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+
+            td {
+                padding: 10px;
+            }
+
+            td:first-child {
+                display: block;
+                text-align: center;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        }
+    </style>
+    <h1>Movies for sample user:</h1>
+    <table border="1" class="dataframe">
+        <thead>
+            <tr style="text-align: right;">
+                <th></th>
+                <th>Poster</th>
+                <th>Title</th>
+                <th>Release</th>
+                <th>Runtime</th>
+                <th>IMDB</th>
+                <th>Overview</th>
+                <th>Director</th>
+                <th>Actors</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>0</th>
+                <td><img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX67_CR0,0,67,98_AL_.jpg"
+                        alt="Movie Poster"></td>
+                <td>The Dark Knight</td>
+                <td>2008</td>
+                <td>152 min</td>
+                <td>9.0</td>
+                <td>When the menace known as the Joker wreaks havo...</td>
+                <td>Christopher Nolan</td>
+                <td>Christian Bale, Heath Ledger, Aaron Eckhart</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td><img src="https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX67_CR0,0,67,98_AL_.jpg"
+                        alt="Movie Poster"></td>
+                <td>The Lord of the Rings: The Return of the King</td>
+                <td>2003</td>
+                <td>201 min</td>
+                <td>8.9</td>
+                <td>Gandalf and Aragorn lead the World of Men agai...</td>
+                <td>Peter Jackson</td>
+                <td>Elijah Wood, Viggo Mortensen, Ian McKellen</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td><img src="https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_UX67_CR0,0,67,98_AL_.jpg"
+                        alt="Movie Poster"></td>
+                <td>The Lord of the Rings: The Fellowship of the Ring</td>
+                <td>2001</td>
+                <td>178 min</td>
+                <td>8.8</td>
+                <td>A meek Hobbit from the Shire and eight compani...</td>
+                <td>Peter Jackson</td>
+                <td>Elijah Wood, Ian McKellen, Orlando Bloom</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td><img src="https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX67_CR0,0,67,98_AL_.jpg"
+                        alt="Movie Poster"></td>
+                <td>The Lord of the Rings: The Two Towers</td>
+                <td>2002</td>
+                <td>179 min</td>
+                <td>8.7</td>
+                <td>While Frodo and Sam edge closer to Mordor with...</td>
+                <td>Peter Jackson</td>
+                <td>Elijah Wood, Ian McKellen, Viggo Mortensen</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Se7en</td>
+                <td>1995</td>
+                <td>127 min</td>
+                <td>8.6</td>
+                <td>Two detectives, a rookie and a veteran, hunt a...</td>
+                <td>David Fincher</td>
+                <td>Morgan Freeman, Brad Pitt, Kevin Spacey</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Dunkirk</td>
+                <td>2017</td>
+                <td>106 min</td>
+                <td>7.8</td>
+                <td>Allied soldiers from Belgium, the British Empi...</td>
+                <td>Christopher Nolan</td>
+                <td>Fionn Whitehead, Barry Keoghan, Mark Rylance</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>The Departed</td>
+                <td>2006</td>
+                <td>151 min</td>
+                <td>8.5</td>
+                <td>An undercover cop and a mole in the police att...</td>
+                <td>Martin Scorsese</td>
+                <td>Leonardo DiCaprio, Matt Damon, Jack Nicholson</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Gladiator</td>
+                <td>2000</td>
+                <td>155 min</td>
+                <td>8.5</td>
+                <td>A former Roman General sets out to exact venge...</td>
+                <td>Ridley Scott</td>
+                <td>Russell Crowe, Joaquin Phoenix, Connie Nielsen</td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>The Lion King</td>
+                <td>1994</td>
+                <td>88 min</td>
+                <td>8.5</td>
+                <td>Lion prince Simba and his father are targeted ...</td>
+                <td>Roger Allers</td>
+                <td>Rob Minkoff, Matthew Broderick, Jeremy Irons</td>
+            </tr>
+            <tr>
+                <th>9</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Avengers: Endgame</td>
+                <td>2019</td>
+                <td>181 min</td>
+                <td>8.4</td>
+                <td>After the devastating events of Avengers: Infi...</td>
+                <td>Anthony Russo</td>
+                <td>Joe Russo, Robert Downey Jr., Chris Evans</td>
+            </tr>
+            <tr>
+                <th>10</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Avengers: Infinity War</td>
+                <td>2018</td>
+                <td>149 min</td>
+                <td>8.4</td>
+                <td>The Avengers and their allies must be willing ...</td>
+                <td>Anthony Russo</td>
+                <td>Joe Russo, Robert Downey Jr., Chris Hemsworth</td>
+            </tr>
+            <tr>
+                <th>11</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>The Dark Knight Rises</td>
+                <td>2012</td>
+                <td>164 min</td>
+                <td>8.4</td>
+                <td>Eight years after the Joker's reign of anarchy...</td>
+                <td>Christopher Nolan</td>
+                <td>Christian Bale, Tom Hardy, Anne Hathaway</td>
+            </tr>
+            <tr>
+                <th>12</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BOTJiNDEzOWYtMTVjOC00ZjlmLWE0NGMtZmE1OWVmZDQ2OWJhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Inglourious Basterds</td>
+                <td>2009</td>
+                <td>153 min</td>
+                <td>8.3</td>
+                <td>In Nazi-occupied France during World War II, a...</td>
+                <td>Quentin Tarantino</td>
+                <td>Brad Pitt, Diane Kruger, Eli Roth</td>
+            </tr>
+            <tr>
+                <th>13</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BZGU2OGY5ZTYtMWNhYy00NjZiLWI0NjUtZmNhY2JhNDRmODU3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Aliens</td>
+                <td>1986</td>
+                <td>137 min</td>
+                <td>8.3</td>
+                <td>Fifty-seven years after surviving an apocalypt...</td>
+                <td>James Cameron</td>
+                <td>Sigourney Weaver, Michael Biehn, Carrie Henn</td>
+            </tr>
+            <tr>
+                <th>14</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BOGZhZDIzNWMtNjkxMS00MDQ1LThkMTYtZWQzYWU3MWMxMGU5XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Das Boot</td>
+                <td>1981</td>
+                <td>149 min</td>
+                <td>8.3</td>
+                <td>The claustrophobic world of a WWII German U-bo...</td>
+                <td>Wolfgang Petersen</td>
+                <td>Jürgen Prochnow, Herbert Grönemeyer, Klaus Wen...</td>
+            </tr>
+            <tr>
+                <th>15</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BYWY5ZjhjNGYtZmI2Ny00ODM0LWFkNzgtZmI1YzA2N2MxMzA0XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UY98_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Lawrence of Arabia</td>
+                <td>1962</td>
+                <td>228 min</td>
+                <td>8.3</td>
+                <td>The story of T.E. Lawrence, the English office...</td>
+                <td>David Lean</td>
+                <td>Peter O'Toole, Alec Guinness, Anthony Quinn</td>
+            </tr>
+            <tr>
+                <th>16</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BNWYyOWRlOWItZWM5MS00ZjJkLWI0MTUtYTE3NTI5MDAwYjgyXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UY98_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"> </td>
+                <td>Queen</td>
+                <td>2013</td>
+                <td>146 min</td>
+                <td>8.2</td>
+                <td>A Delhi girl from a traditional family sets ou...</td>
+                <td>Vikas Bahl</td>
+                <td>Kangana Ranaut, Rajkummar Rao, Lisa Haydon</td>
+            </tr>
+            <tr>
+                <th>17</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BNTg0NmI1ZGQtZTUxNC00NTgxLThjMDUtZmRlYmEzM2MwOWYwXkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_UY98_CR1,0,67,98_AL_.jpg
+                        alt="Movie Poster">
+                </td>
+                <td>Tenkû no shiro Rapyuta</td>
+                <td>1986</td>
+                <td>125 min</td>
+                <td>8.0</td>
+                <td>A young boy and a girl with a magic crystal mu...</td>
+                <td>Hayao Miyazaki</td>
+                <td>Mayumi Tanaka, Keiko Yokozawa, Kotoe Hatsui</td>
+            </tr>
+            <tr>
+                <th>18</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>The Wolf of Wall Street</td>
+                <td>2013</td>
+                <td>180 min</td>
+                <td>8.2</td>
+                <td>Based on the true story of Jordan Belfort, fro...</td>
+                <td>Martin Scorsese</td>
+                <td>Leonardo DiCaprio, Jonah Hill, Margot Robbie</td>
+            </tr>
+            <tr>
+                <th>19</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BOTI5ODc3NzExNV5BMl5BanBnXkFtZTcwNzYxNzQzMw@@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>V for Vendetta</td>
+                <td>2005</td>
+                <td>132 min</td>
+                <td>8.2</td>
+                <td>In a future British tyranny, a shadowy freedom...</td>
+                <td>James McTeigue</td>
+                <td>Hugo Weaving, Natalie Portman, Rupert Graves</td>
+            </tr>
+            <tr>
+                <th>20</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Batman Begins</td>
+                <td>2005</td>
+                <td>140 min</td>
+                <td>8.2</td>
+                <td>After training with his mentor, Batman begins ...</td>
+                <td>Christopher Nolan</td>
+                <td>Christian Bale, Michael Caine, Ken Watanabe</td>
+            </tr>
+            <tr>
+                <th>21</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BZjEyOTE4MzMtNmMzMy00Mzc3LWJlOTQtOGJiNDE0ZmJiOTU4L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY98_CR2,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>The Gold Rush</td>
+                <td>1925</td>
+                <td>95 min</td>
+                <td>8.2</td>
+                <td>A prospector goes to the Klondike in search of...</td>
+                <td>Charles Chaplin</td>
+                <td>Charles Chaplin, Mack Swain, Tom Murray</td>
+            </tr>
+            <tr>
+                <th>22</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BYzc5MTU4N2EtYTkyMi00NjdhLTg3NWEtMTY4OTEyMzJhZTAzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"> </td>
+                <td>Logan</td>
+                <td>2017</td>
+                <td>137 min</td>
+                <td>8.1</td>
+                <td>In a future where mutants are nearly extinct, ...</td>
+                <td>James Mangold</td>
+                <td>Hugh Jackman, Patrick Stewart, Dafne Keen</td>
+            </tr>
+            <tr>
+                <th>23</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMTQ2MDMwNjEwNV5BMl5BanBnXkFtZTgwOTkxMzI0MzE@._V1_UY98_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"> </td>
+                <td>Song of the Sea</td>
+                <td>2014</td>
+                <td>93 min</td>
+                <td>8.1</td>
+                <td>Ben, a young Irish boy, and his little sister ...</td>
+                <td>Tomm Moore</td>
+                <td>David Rawle, Brendan Gleeson, Lisa Hannigan</td>
+            </tr>
+            <tr>
+                <th>24</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Harry Potter and the Deathly Hallows: Part 2</td>
+                <td>2011</td>
+                <td>130 min</td>
+                <td>8.1</td>
+                <td>Harry, Ron, and Hermione search for Voldemort'...</td>
+                <td>David Yates</td>
+                <td>Daniel Radcliffe, Emma Watson, Rupert Grint</td>
+            </tr>
+            <tr>
+                <th>25</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMDgzYjQwMDMtNGUzYi00MTRmLWIyMGMtNjE1OGZkNzY2YWIzL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY98_CR1,0,67,98_AL_.jpg
+                        alt="Movie Poster"> </td>
+                <td>Mary and Max</td>
+                <td>2009</td>
+                <td>92 min</td>
+                <td>8.1</td>
+                <td>A tale of friendship between two unlikely pen ...</td>
+                <td>Adam Elliot</td>
+                <td>Toni Collette, Philip Seymour Hoffman, Eric Bana</td>
+            </tr>
+            <tr>
+                <th>26</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMTAwNDEyODU1MjheQTJeQWpwZ15BbWU2MDc3NDQwNw@@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Into the Wild</td>
+                <td>2007</td>
+                <td>148 min</td>
+                <td>8.1</td>
+                <td>After graduating from Emory University, top st...</td>
+                <td>Sean Penn</td>
+                <td>Emile Hirsch, Vince Vaughn, Catherine Keener</td>
+            </tr>
+            <tr>
+                <th>27</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMTY1NTI0ODUyOF5BMl5BanBnXkFtZTgwNTEyNjQ0MDE@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Monsters, Inc.</td>
+                <td>2001</td>
+                <td>92 min</td>
+                <td>8.1</td>
+                <td>In order to power the city, monsters have to s...</td>
+                <td>Pete Docter</td>
+                <td>David Silverman, Lee Unkrich, Billy Crystal</td>
+            </tr>
+            <tr>
+                <th>28</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BZmY4Yjc0OWQtZDRhMy00ODc2LWI2NGYtMWFlODYyN2VlNDQyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY98_CR1,0,67,98_AL_.jpg
+                        alt="Movie Poster"> </td>
+                <td>Solaris</td>
+                <td>1972</td>
+                <td>167 min</td>
+                <td>8.1</td>
+                <td>A psychologist is sent to a station orbiting a...</td>
+                <td>Andrei Tarkovsky</td>
+                <td>Natalya Bondarchuk, Donatas Banionis, Jüri Järvet</td>
+            </tr>
+            <tr>
+                <th>29</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BZDdkNzMwZmUtY2Q5MS00ZmM2LWJhYjItYTBjMWY0MGM4MDRjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY98_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Le salaire de la peur</td>
+                <td>1953</td>
+                <td>131 min</td>
+                <td>8.1</td>
+                <td>In a decrepit South American village, four men...</td>
+                <td>Henri-Georges Clouzot</td>
+                <td>Yves Montand, Charles Vanel, Peter van Eyck</td>
+            </tr>
+            <tr>
+                <th>30</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BNjJkYTc5N2UtMGRlMC00M2FmLTk0ZWMtOTYxNDUwNjI2YzljXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"> </td>
+                <td>Togo</td>
+                <td>2019</td>
+                <td>113 min</td>
+                <td>8.0</td>
+                <td>The story of Togo, the sled dog who led the 19...</td>
+                <td>Ericson Core</td>
+                <td>Willem Dafoe, Julianne Nicholson, Christopher ...</td>
+            </tr>
+            <tr>
+                <th>31</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>La La Land</td>
+                <td>2016</td>
+                <td>128 min</td>
+                <td>8.0</td>
+                <td>While navigating their careers in Los Angeles,...</td>
+                <td>Damien Chazelle</td>
+                <td>Ryan Gosling, Emma Stone, Rosemarie DeWitt</td>
+            </tr>
+            <tr>
+                <th>32</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>The Martian</td>
+                <td>2015</td>
+                <td>144 min</td>
+                <td>8.0</td>
+                <td>An astronaut becomes stranded on Mars after hi...</td>
+                <td>Ridley Scott</td>
+                <td>Matt Damon, Jessica Chastain, Kristen Wiig</td>
+            </tr>
+            <tr>
+                <th>33</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BNThmMWMyMWMtOWRiNy00MGY0LTg1OTUtNjYzODg2MjdlZGU5XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY98_CR1,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Kaguyahime no monogatari</td>
+                <td>2013</td>
+                <td>137 min</td>
+                <td>8.0</td>
+                <td>Found inside a shining stalk of bamboo by an o...</td>
+                <td>Isao Takahata</td>
+                <td>Chloë Grace Moretz, James Caan, Mary Steenburgen</td>
+            </tr>
+            <tr>
+                <th>34</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"> </td>
+                <td>Her</td>
+                <td>2013</td>
+                <td>126 min</td>
+                <td>8.0</td>
+                <td>In a near future, a lonely writer develops an ...</td>
+                <td>Spike Jonze</td>
+                <td>Joaquin Phoenix, Amy Adams, Scarlett Johansson</td>
+            </tr>
+            <tr>
+                <th>35</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMDE5OWMzM2QtOTU2ZS00NzAyLWI2MDEtOTRlYjIxZGM0OWRjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>The Revenant</td>
+                <td>2015</td>
+                <td>156 min</td>
+                <td>8.0</td>
+                <td>A frontiersman on a fur trading expedition in ...</td>
+                <td>Alejandro G. Iñárritu</td>
+                <td>Leonardo DiCaprio, Tom Hardy, Will Poulter</td>
+            </tr>
+            <tr>
+                <th>36</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>The Avengers</td>
+                <td>2012</td>
+                <td>143 min</td>
+                <td>8.0</td>
+                <td>Earth's mightiest heroes must come together an...</td>
+                <td>Joss Whedon</td>
+                <td>Robert Downey Jr., Chris Evans, Scarlett Johan...</td>
+            </tr>
+            <tr>
+                <th>37</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BZDMxOGZhNWYtMzRlYy00Mzk5LWJjMjEtNmQ4NDU4M2QxM2UzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Blood Diamond</td>
+                <td>2006</td>
+                <td>143 min</td>
+                <td>8.0</td>
+                <td>A fisherman, a smuggler, and a syndicate of bu...</td>
+                <td>Edward Zwick</td>
+                <td>Leonardo DiCaprio, Djimon Hounsou, Jennifer Co...</td>
+            </tr>
+            <tr>
+                <th>38</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMmU3NzIyODctYjVhOC00NzBmLTlhNWItMzBlODEwZTlmMjUzXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster"></td>
+                <td>Big Fish</td>
+                <td>2003</td>
+                <td>125 min</td>
+                <td>8.0</td>
+                <td>A frustrated son tries to determine the fact f...</td>
+                <td>Tim Burton</td>
+                <td>Ewan McGregor, Albert Finney, Billy Crudup</td>
+            </tr>
+            <tr>
+                <th>39</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BZjZlZDlkYTktMmU1My00ZDBiLWFlNjEtYTBhNjVhOTM4ZjJjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster" </td>
+                <td>Donnie Darko</td>
+                <td>2001</td>
+                <td>113 min</td>
+                <td>8.0</td>
+                <td>After narrowly escaping a bizarre accident, a ...</td>
+                <td>Richard Kelly</td>
+                <td>Jake Gyllenhaal, Jena Malone, Mary McDonnell</td>
+            </tr>
+            <tr>
+                <th>40</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BZGVmY2RjNDgtMTc3Yy00YmY0LTgwODItYzBjNWJhNTRlYjdkXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster">
+                </td>
+                <td>Marriage Story</td>
+                <td>2019</td>
+                <td>137 min</td>
+                <td>7.9</td>
+                <td>Noah Baumbach's incisive and compassionate loo...</td>
+                <td>Noah Baumbach</td>
+                <td>Adam Driver, Scarlett Johansson, Julia Greer</td>
+            </tr>
+            <tr>
+                <th>42</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMjI1MDQ2MDg5Ml5BMl5BanBnXkFtZTgwMjc2NjM5ODE@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster">
+                </td>
+                <td>Hunt for the Wilderpeople</td>
+                <td>2016</td>
+                <td>101 min</td>
+                <td>7.9</td>
+                <td>A national manhunt is ordered for a rebellious...</td>
+                <td>Taika Waititi</td>
+                <td>Sam Neill, Julian Dennison, Rima Te Wiata</td>
+            </tr>
+            <tr>
+                <th>43</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMjEzODA3MDcxMl5BMl5BanBnXkFtZTgwODgxNDk3NzE@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster">
+                </td>
+                <td>Sing Street</td>
+                <td>2016</td>
+                <td>106 min</td>
+                <td>7.9</td>
+                <td>A boy growing up in Dublin during the 1980s es...</td>
+                <td>John Carney</td>
+                <td>Ferdia Walsh-Peelo, Aidan Gillen, Maria Doyle ...</td>
+            </tr>
+            <tr>
+                <th>44</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BZGIzNWYzN2YtMjcwYS00YjQ3LWI2NjMtOTNiYTUyYjE2MGNkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster">
+                </td>
+                <td>X-Men: Days of Future Past</td>
+                <td>2014</td>
+                <td>132 min</td>
+                <td>7.9</td>
+                <td>The X-Men send Wolverine to the past in a desp...</td>
+                <td>Bryan Singer</td>
+                <td>Patrick Stewart, Ian McKellen, Hugh Jackman</td>
+            </tr>
+            <tr>
+                <th>45</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMTgzODgyNTQwOV5BMl5BanBnXkFtZTcwNzc0NTc0Mg@@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster">
+                </td>
+                <td>Moon</td>
+                <td>2009</td>
+                <td>97 min</td>
+                <td>7.9</td>
+                <td>Astronaut Sam Bell has a quintessentially pers...</td>
+                <td>Duncan Jones</td>
+                <td>Sam Rockwell, Kevin Spacey, Dominique McElligott</td>
+            </tr>
+            <tr>
+                <th>46</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMjE0NzgwODI4M15BMl5BanBnXkFtZTcwNjg3OTA0MQ@@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster">
+                </td>
+                <td>Letters from Iwo Jima</td>
+                <td>2006</td>
+                <td>141 min</td>
+                <td>7.9</td>
+                <td>The story of the battle of Iwo Jima between th...</td>
+                <td>Clint Eastwood</td>
+                <td>Ken Watanabe, Kazunari Ninomiya, Tsuyoshi Ihara</td>
+            </tr>
+            <tr>
+                <th>47</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMjAzODUwMjM1M15BMl5BanBnXkFtZTcwNjU2MjU2MQ@@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster">
+                </td>
+                <td>The Fall</td>
+                <td>2006</td>
+                <td>117 min</td>
+                <td>7.9</td>
+                <td>In a hospital on the outskirts of 1920s Los An...</td>
+                <td>Tarsem Singh</td>
+                <td>Lee Pace, Catinca Untaru, Justine Waddell</td>
+            </tr>
+            <tr>
+                <th>48</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BNTg2OTY2ODg5OF5BMl5BanBnXkFtZTcwODM5MTYxOA@@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster">
+                </td>
+                <td>Life of Pi</td>
+                <td>2012</td>
+                <td>127 min</td>
+                <td>7.9</td>
+                <td>A young man who survives a disaster at sea is ...</td>
+                <td>Ang Lee</td>
+                <td>Suraj Sharma, Irrfan Khan, Adil Hussain</td>
+            </tr>
+            <tr>
+                <th>49</th>
+                <td><img src=https://m.media-amazon.com/images/M/MV5BMTQ5NTI2NTI4NF5BMl5BanBnXkFtZTcwNjk2NDA2OQ@@._V1_UX67_CR0,0,67,98_AL_.jpg
+                        alt="Movie Poster">
+                </td>
+                <td>Children of Men</td>
+                <td>2006</td>
+                <td>109 min</td>
+                <td>7.9</td>
+                <td>In 2027, in a chaotic world in which women hav...</td>
+                <td>Alfonso Cuarón</td>
+                <td>Julianne Moore, Clive Owen, Chiwetel Ejiofor</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
